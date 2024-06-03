@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bc_all"
+    tools:context=".frags.home">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/card"
+        app:cardCornerRadius="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="7dp"
+        android:layout_height="225dp">
+
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:padding="3dp"
+
+
+        android:background="@drawable/border">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hi!"
+            android:textColor="@color/white"
+            android:layout_alignParentStart="true"
+            android:layout_above="@id/userName"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:text="visitor"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:id="@+id/spacer"
+        android:background="@color/text_c"
+        android:layout_marginHorizontal="7dp"
+        android:layout_below="@id/card"/>
+
+    <RelativeLayout
+        android:id="@+id/rc1_"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spacer"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="14dp">
+
+        <TextView
+            android:id="@+id/txt_home1_"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="sans-serif-smallcaps"
+
+            android:text="Hello Friend!"
+            android:textColor="@color/text_title"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_home2_"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_home1_"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Welcome to our House Price Prediction App! This application utilizes advanced machine learning algorithms to estimate the price of residential properties."
+            android:textColor="@color/text_c"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rc2_"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rc1_"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="14dp">
+
+        <TextView
+            android:id="@+id/txt_home3_"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="sans-serif-smallcaps"
+
+            android:text="Get Started:"
+            android:textColor="@color/text_title"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_home4_"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_home3_"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Begin exploring the app by tapping on the continue button and discover the potential value of your dream home!"
+            android:textColor="@color/text_c"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/continue_"
+        android:text="continue"
+        android:backgroundTint="#6D74F5"
+        android:layout_width="wrap_content"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rc2_"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp" />
+
+
+</RelativeLayout>

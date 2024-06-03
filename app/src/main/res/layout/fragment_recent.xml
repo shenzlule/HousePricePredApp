@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bc_all"
+    android:paddingTop="4dp"
+    tools:context=".frags.Recent">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/title__"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:text="RECENT"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/noitems"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No Recent items"
+        android:layout_centerInParent="true"
+       android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/title__"
+        android:layout_marginTop="5dp"
+        android:id="@+id/rc_recents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+      android:layout_marginHorizontal="5dp"
+
+        />
+
+
+
+</RelativeLayout>

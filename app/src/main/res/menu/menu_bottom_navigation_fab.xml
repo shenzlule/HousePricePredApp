@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/Home"
+        android:icon="@drawable/ic_baseline_other_houses_24"
+        android:title="Home"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/pred"
+        android:icon="@drawable/ic_baseline_attach_money_24"
+        android:title="Predict"
+        app:showAsAction="always" />
+
+
+    <item
+        android:id="@+id/Recent"
+        android:icon="@drawable/ic_baseline_history_24"
+        android:title="Recent"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/More"
+        android:icon="@drawable/ic_baseline_more_vert_24"
+        android:title="More"
+        app:showAsAction="always" />
+
+</menu>

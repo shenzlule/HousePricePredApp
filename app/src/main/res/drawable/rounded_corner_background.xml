@@ -1,0 +1,14 @@
+<!-- res/drawable/rounded_corner_background.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="16dp" />
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+    <item>
+        <bitmap
+            android:src="@drawable/welcome_card_img"
+            android:gravity="center" />
+    </item>
+</layer-list>

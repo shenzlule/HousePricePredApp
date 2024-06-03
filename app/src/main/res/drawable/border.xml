@@ -1,0 +1,30 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Rounded corners shape with transparent background to clip the image -->
+    <item android:left="3dp" android:right="3dp" android:top="3dp" android:bottom="3dp">
+        <shape>
+            <solid android:color="@android:color/white" />
+            <corners android:radius="15dp" />
+        </shape>
+    </item>
+
+    <!-- Background image -->
+    <item>
+        <bitmap
+            android:src="@drawable/welcome_card_img"
+            android:gravity="fill"
+            android:tileMode="disabled"/>
+    </item>
+
+    <!-- Stroke and rounded corners overlay -->
+    <item>
+        <shape>
+            <solid android:color="@android:color/transparent" />
+            <stroke
+                android:width="3dp"
+                android:color="@color/text_c" />
+            <corners
+                android:radius="15dp" />
+        </shape>
+    </item>
+</layer-list>

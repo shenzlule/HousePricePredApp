@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bc_all"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".frags.MakePred">
+
+    <!-- TODO: Update blank fragment layout -->
+    <!-- activity_main.xml -->
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/h1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Please fill in the inputs below."
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="21sp" />
+
+            <TextView
+                android:id="@+id/h2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Results:"
+                android:visibility="gone"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="21sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/input_dis"
+                android:visibility="visible"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/text_c"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="1dp" />
+
+                <LinearLayout
+                    android:id="@+id/l1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Posted By"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <RadioGroup
+                        android:id="@+id/posted_by"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="10dp"
+                        android:orientation="horizontal">
+
+
+                        <RadioButton
+                            android:id="@+id/Dealer"
+                            android:textSize="13sp"
+                            android:layout_width="wrap_content"
+                            android:checked="true"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:textColor="@color/black"
+                            android:text="Dealer" />
+
+                        <RadioButton
+                            android:id="@+id/Owner"
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="13sp"
+                            android:layout_height="wrap_content"
+                            android:text="Owner" />
+
+                        <RadioButton
+                            android:id="@+id/Builder"
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="13sp"
+                            android:layout_height="wrap_content"
+                            android:text="Builder" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/text_c"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="1dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/l2"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="Compliance with Real Estate Regulatory Authority"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <RadioGroup
+                        android:id="@+id/comp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="10dp"
+                        android:orientation="horizontal">
+
+
+                        <RadioButton
+                            android:id="@+id/compYes"
+                            android:textSize="13sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:textColor="@color/black"
+                            android:checked="true"
+                            android:text="Yes" />
+
+                        <RadioButton
+                            android:id="@+id/compNo"
+                            android:layout_width="wrap_content"
+                            android:textSize="13sp"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:text="No" />
+
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/text_c"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="1dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/l3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=" Number of bedrooms, halls, and kitchens"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="10dp"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/BHK_NO"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/custom_style"
+                        android:hint="0"
+                        android:inputType="number"
+                        android:minHeight="48dp"
+                        android:padding="8dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="#BDBDBD"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/text_c"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="1dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/l4"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="BHK (Bedroom, Hall, Kitchen) or an RK (Room, Kitchen)."
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="15sp" />
+
+                    <RadioGroup
+                        android:id="@+id/isBHK_isRK"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="10dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/isBHK"
+                            android:layout_width="wrap_content"
+                            android:textSize="13sp"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:text="BHK" />
+
+                        <RadioButton
+                            android:id="@+id/isRK"
+                            android:textSize="13sp"
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:layout_marginStart="10dp"
+                            android:text="RK" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/text_c"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="1dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/l5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Area of the property in square feet."
+                        android:textColor="@color/black"
+                        android:layout_marginBottom="10dp"
+                        android:textStyle="bold"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/custom_style"
+                        android:hint="0"
+                        android:inputType="number"
+                        android:minHeight="48dp"
+                        android:padding="8dp"
+                        android:textColor="@color/black"
+                        android:id="@+id/area"
+                        android:textColorHint="#BDBDBD"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/text_c"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="1dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/l6"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="The property is a resale"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <RadioGroup
+                        android:id="@+id/resale"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="10dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/isResale"
+                            android:layout_width="wrap_content"
+                            android:textSize="13sp"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content"
+                            android:text="Yes" />
+
+                        <RadioButton
+                            android:id="@+id/not_Resale"
+                            android:textSize="13sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:textColor="@color/black"
+                            android:layout_marginStart="10dp"
+                            android:text="No" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/text_c"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="1dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/l7"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="Longitude"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <SeekBar
+                        android:id="@+id/longitude"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:indeterminate="false"
+                        android:layout_marginTop="5dp"
+                        android:max="60"
+                        android:min="-30"
+                        android:progress="-30"
+                        android:progressDrawable="@drawable/custom_seekbar"
+                        android:thumb="@drawable/thumb" />
+
+
+                    <TextView
+                        android:id="@+id/longitudeValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:layout_gravity="center_horizontal"
+                        android:paddingTop="5dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/text_c"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="1dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/l8"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Latitude"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_marginBottom="10dp"
+                        android:textSize="15sp" />
+
+
+                    <SeekBar
+                        android:id="@+id/latitude"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:indeterminate="false"
+                        android:max="160"
+                        android:min="-120"
+                        android:progress="-120"
+                        android:progressDrawable="@drawable/custom_seekbar"
+                        android:thumb="@drawable/thumb" />
+
+                    <TextView
+                        android:id="@+id/latitudeValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:layout_gravity="center_horizontal"
+                        android:paddingTop="5dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/text_c"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="1dp" />
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Predict"
+                    android:id="@+id/predict_button"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#6D74F5"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="40dp"
+                    android:layout_gravity="center_horizontal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/results"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/text_c"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="1dp" />
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Posted by : "
+                        android:textStyle="normal"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/p1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/text_c"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="1dp" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Real Estate Regulation Authority : "
+                        android:textStyle="normal"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/p2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/text_c"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="1dp" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Number of bedrooms,Hall, Kitchens : "
+                        android:textStyle="normal"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/p3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/text_c"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="1dp" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="BHK or RK : "
+                        android:textStyle="normal"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/p4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/text_c"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="1dp" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Area : "
+                        android:textStyle="normal"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/p5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/text_c"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="1dp" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Resale : "
+                        android:textStyle="normal"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/p6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/text_c"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="1dp" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Longitude : "
+                        android:textStyle="normal"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/p7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/text_c"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="1dp" />
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Latitude :"
+                        android:textStyle="normal"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/p8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/text_c"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="1dp" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Predicted House Price : "
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/text_c"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="1dp" />
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="More"
+                    android:id="@+id/predict_more"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#6D74F5"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="40dp"
+                    android:layout_gravity="center_horizontal" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

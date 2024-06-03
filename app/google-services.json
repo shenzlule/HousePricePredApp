@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "570900465925",
+    "project_id": "jose-house-price-prediction",
+    "storage_bucket": "jose-house-price-prediction.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:570900465925:android:d822c4995985ad6131cf6c",
+        "android_client_info": {
+          "package_name": "com.tonni.housepredictionapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "570900465925-7490c8d3h4lnt0q7a49609ngu1ovpm9g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOMOUXSN9_whEF2J05uDcOe5m9z24sOSY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "570900465925-7490c8d3h4lnt0q7a49609ngu1ovpm9g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
